@@ -24,7 +24,7 @@ class MatchesController < ApplicationController
     body_hash = { :challenger => challenger.display_name, 
                   :incumbent => incumbent.display_name,
                   :tournament => @tournament.name }
-    Notification.deliver_challenge_email(challenger.email,[challenger.email,incumbent.email].map{|x| %{<#{x}>} if x}.join(','),"A Ping Pong Challenge Has been Requested",body_hash)
+    Notification.deliver_challenge_email(challenger.email, "<#{challenger.email}>, <#{incumbent.email}>", "A ping-pong challenge has been requested!", body_hash)
     
     respond_to do |format|
       if @match.save
