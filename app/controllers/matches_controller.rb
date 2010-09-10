@@ -1,8 +1,6 @@
 class MatchesController < ApplicationController
   # GET /tournament/:tournament_id/matches
   # GET /tournament/:tournament_id/matches.xml
-
-  
   def index
     @tournament = Tournament.find(params[:tournament_id])
     @matches = Match.where(:tournament_id => @tournament.id, :winner => nil).all
