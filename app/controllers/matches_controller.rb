@@ -20,12 +20,12 @@ class MatchesController < ApplicationController
     @match = Match.new(params[:match])
     @match.tournament = @tournament
     
-    #send challenge email
+    # Send challenge email
     challenger = User.find(params[:match][:challenger_id])
     incumbent = User.find(params[:match][:incumbent_id])
-    body_hash = {:challenger => challenger.readable_name, 
-                 :incumbent => incumbent.readable_name,
-                 :tournament => @tournament.name}
+    body_hash = { :challenger => challenger.display_name, 
+                  :incumbent => incumbent.display_name,
+                  :tournament => @tournament.name }
     Notification.deliver_challenge_email(challenger.email,[challenger.email,incumbent.email].map{|x| %{<#{x}>} if x}.join(','),"A Ping Pong Challenge Has been Requested",body_hash)
     
     respond_to do |format|

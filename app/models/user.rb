@@ -58,7 +58,7 @@ class User < ActiveRecord::Base
     end
   end
   
-  def readable_name
+  def display_name
     if first_name.blank? || last_name.blank?
       email
     else
