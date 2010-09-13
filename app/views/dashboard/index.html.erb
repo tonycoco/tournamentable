@@ -1,17 +1,12 @@
 <% unless @rankings.blank? %>
   <h2>Your rankings</h2>
-  <table>
-    <tr>
-      <th>Tournament</th>
-      <th>Rank</th>
-    </tr>
+  <ul>
     <% @rankings.each do |ranking| %>
-      <tr>
-        <td><%= link_to ranking.tournament.name, ranking.tournament %></td>
-        <td><%= ranking.rank %></td>
-      </tr>
+      <li>
+        <%= link_to ranking.tournament.name, ranking.tournament %> (#<%= ranking.rank %>)
+      </li>
     <% end %>
-  </table>
+  </ul>
 <% else %>
   <p>It doesn't look like you have any tournaments. Try joining or creating one!</p>
 <% end %>
