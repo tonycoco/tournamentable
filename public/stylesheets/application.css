@@ -1,60 +1,38 @@
-body { background-color: #fff; color: #333; }
-
-body, p, ol, ul, td {
-  font-family: helvetica, arial, sans-serif;
-  font-size:   13px;
-  line-height: 18px;
-}
-
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
-}
-
-a { color: #000; }
-a:visited { color: #666; }
-a:hover { color: #fff; background-color:#000; }
-
-div.field, div.actions {
-  margin-bottom: 10px;
-}
-
-#notice {
-  color: green;
-}
-
-#alert {
-  color: red;
-}
-
-.field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
-}
-
-#error_explanation {
-  width: 450px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 0;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-}
-
-#error_explanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px;
-  margin-bottom: 0px;
-  background-color: #c00;
-  color: #fff;
-}
-
-#error_explanation ul li {
-  font-size: 12px;
-  list-style: square;
-}
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;font-weight:normal;}
+body{line-height:1;text-align:center;font-family:Helvetica,Arial,sans-serif;}
+body{font-size:19px;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+nav ul{list-style:none;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;}
+ins{background-color:#fff;color:#000;text-decoration:none;}
+mark{background-color:#fff;color:#000;font-style:italic;font-weight:bold;}
+del{text-decoration:line-through;}
+abbr[title],dfn[title]{border-bottom:1px dotted inherit;cursor:help;}
+table{border-collapse:collapse;border-spacing:0;}
+hr{display:block;height:1px;border:0;border-top:1px solid #cccccc;margin:1em 0;padding:0;}
+input,select{vertical-align:middle;}
+a{color:#2c5e2e;}
+#notice{color:#2c5e2e;}
+#alert{color:#802;}
+.field_with_errors{padding:2px;background-color:red;display:table;}
+#error_explanation{width:450px;border:2px solid red;padding:7px;padding-bottom:0;margin-bottom:20px;background-color:#f0f0f0;}
+#error_explanation h2{text-align:left;font-weight:bold;padding:5px 5px 5px 15px;font-size:12px;margin:-7px;margin-bottom:0px;background-color:#802;color:#fff;}
+#error_explanation ul li{font-size:11px;list-style:square;}
+#page{width:800px;margin:40px auto;text-align:left;}
+h2{font-size:31px;margin-bottom:10px;}
+form p label{line-height:25px;}
+header{margin-bottom: 40px;}
+header h1{font-size:39px;margin-bottom:5px;}
+header nav{color:#666;}
+section#content,section#flash{margin-bottom:40px;}
+section#flash{background-color:#fffdee;padding:20px 40px;}
+section#content p{margin-bottom:10px;}
+section#content form{margin-bottom:10px;}
+section#content h3{font-size:21px;margin-bottom:5px;}
+section#content ol,section#content ul{margin-bottom:10px;}
+section#content ol li,section#content ul li{margin-left:25px;margin-bottom:5px;}
+p.owner{margin-bottom:10px;}
+p.owner, p.remember{color:#666;font-size:11px;}
+footer{color:#666;font-size:13px;}

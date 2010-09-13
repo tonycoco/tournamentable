@@ -1,7 +1,5 @@
-<h2>Dashboard</h2>
-
 <% unless @rankings.blank? %>
-  <h3>Your rankings</h3>
+  <h2>Your rankings</h2>
   <table>
     <tr>
       <th>Tournament</th>
@@ -15,7 +13,7 @@
     <% end %>
   </table>
 <% else %>
-  It doesn't look like you have any tournaments. Try joining or creating one!
+  <p>It doesn't look like you have any tournaments. Try joining or creating one!</p>
 <% end %>
 
 <p><%= link_to 'Join an existing tournament', tournaments_path %> or <%= link_to 'create a new tournament', new_tournament_path %></p>

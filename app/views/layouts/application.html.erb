@@ -7,24 +7,29 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<h1><%= link_to 'Tournamentable', root_path %></h1>
-<p>Making tournaments easier.</p>
-
-<% if user_signed_in? -%>
-  <div id="user_login_box">
-    Welcome, <%= current_user.display_name %>!
-    <%= link_to 'Profile', edit_user_registration_path %>
-    <%= link_to 'Sign out', destroy_user_session_path %>
-  </div>
-<% end -%>
-
-<% if notice %><p id="notice"><%= notice %></p><% end %>
-<% if alert %><p id="alert"><%= alert %></p><% end %>
-
-<%= yield %>
-
-<p>Find a bug? Have a feature? This application is on <a href="http://github.com/tonycoco/tournamentable">Github</a>. Submit your patches today!</p>
-
+<div id="page">
+  <header>
+    <h1><%= link_to 'Tournamentable', root_path %></h1>
+    <nav>
+      <% if user_signed_in? %>
+        Welcome, <%= current_user.display_name %>!
+        <%= link_to 'Profile', edit_user_registration_path %>
+        <%= link_to 'Sign out', destroy_user_session_path %>
+      <% end %>
+    </nav>
+  </header>
+  <% if notice or alert %>
+    <section id="flash">
+      <% if notice %><p id="notice"><%= notice %></p><% end %>
+      <% if alert %><p id="alert"><%= alert %></p><% end %>
+    </section>
+  <% end %>
+  <section id="content">
+    <%= yield %>
+  </section>
+  <footer>
+    <p>Find a bug? Have a feature? This application is on <a href="http://github.com/tonycoco/tournamentable">Github</a>. Submit your patches today!</p>
+  </footer>
+</div>
 </body>
 </html>

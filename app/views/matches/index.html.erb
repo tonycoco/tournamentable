@@ -1,20 +1,13 @@
-<h1>Listing <%= @tournament.name %>'s matches</h1>
+<h2>Listing <%= @tournament.name %>'s matches</h2>
 
 <% if !@matches.blank? %>
-  <table>
-    <tr>
-      <th>Match</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-
-  <% @matches.each do |match| %>
-    <tr>
-      <td><%= link_to "#{match.incumbent.display_name} vs. #{match.challenger.display_name}", tournament_match_path(@tournament, match) %></td>
-    </tr>
-  <% end %>
-  </table>
+  <ul>
+    <% @matches.each do |match| %>
+      <li>
+        <%= link_to "#{match.incumbent.display_name} vs. #{match.challenger.display_name}", tournament_match_path(@tournament, match) %>
+      </li>
+      <% end %>
+  </ul>
 <% else %>
   <p>There are currently no matches for this tournament.</p>
 <% end %>
